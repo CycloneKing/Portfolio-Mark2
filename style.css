@@ -6,13 +6,14 @@
 }
 body {
   background-color: #0b0620;
-  font-family: "Mona Sans", sans-serif;
+  font-family: "Space Mono", monospace;
 }
 header {
   color: black;
   text-align: center;
   width: 100%;
   background-color: antiquewhite;
+  height: 7vh;
 }
 nav {
   padding: 1rem;
@@ -26,6 +27,31 @@ nav ul {
 }
 nav ul li {
   list-style: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+nav li {
+  position: relative;
+  padding: 2.5px 15px;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+}
+
+nav li::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  transition: width 0.2s;
+  background-color: red;
+  left: 1;
+}
+
+nav li:hover::before {
+  width: 40%;
 }
 .info {
   display: flex;
